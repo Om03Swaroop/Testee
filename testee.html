@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPITAL ALERT SYSTEM</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #53454565;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        body{
+            background-color: rgba(255, 130, 130, 0.897);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Accident Alert System</h1>
+        <div id="accidentDetails">
+            <?php
+            // Check if form is submitted
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Store received accident details in variables
+                $name = $_POST["name"];
+                $location = $_POST["location"];
+                $description = $_POST["description"];
+    
+                // Display the received accident details
+                echo "<p><strong>Name:</strong> $name</p>";
+                echo "<p><strong>Location:</strong> $location</p>";
+                echo "<p><strong>Description:</strong> $description</p>";
+    
+                // Additional code to store the accident details in a database can be added here
+                // For simplicity, we are only displaying the details without storing them
+            }
+            ?>
+        </div>
+        <h2>Display Table</h2>
+        <h1>created by BRO</h1>
+        
+        <table id="info-table">
+            <tr>
+    
+                <th>NAME</th>
+                <th>PHONE NUMBER</th>
+                <th>LOCATION</th>
+                <th>TYPE OF ACCIDENT</th>
+                <th>TIME</th>
+                
+                
+                
+            </tr>
+        </table>
+      </div>
+  </div>
+</body>
+</html>
